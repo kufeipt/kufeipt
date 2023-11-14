@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    width: 100%;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #7f8c8d;
+}
+
+nav {
+    background: #ffffff;
+    box-shadow: 0 0 5px #bdc3c7;
+    /* 阴影 */
+    height: 60px;
+}
+
+.common {
+    margin: 0 auto;
+    width: 1200px;
+    /* 让内容居中 */
+}
+
+.nav_left li {
+    float: left;
+    line-height: 60px;
+    width: 120px;
+}
+
+.nav_left li a {
+    text-align: center;
+    display: block;
+}
+
+.nav_left li:hover a {
+    color: #27ae60;
+}
+
+.nav_left .two {
+    display: none;
+}
+
+.nav_left li:hover .two {
+    display: block;
+    /* 鼠标滑过一级菜单显示二级菜单 */
+}
+
+.nav_left .two li {
+    position: relative;
+    /*三级菜单绝对定位 父容器要使用相对定位*/
+    clear: both;
+    text-align: center;
+    background-color: #f1f2f6;
+}
+
+.nav_left .two li a {
+    display: block;
+    color: #7f8c8d;
+    cursor: pointer;
+}
+
+.nav_left .two li:hover a {
+    /* 鼠标滑过二级菜单时 a标签的样式 */
+    background: #bdc3c7;
+    color: #27ae60;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.nav_left .two>li:hover .three {
+    display: block;
+    /*当鼠标悬浮在二级菜单的li标签上时 显示三级菜单*/
+}
+
+.nav_left .two .three {
+    display: none;
+    position: absolute;
+    /*三级菜单设置绝对定位 脱离原文档流*/
+    top: 0px;
+    left: 120px;
+}
+
+.nav_left .two .three li a {
+    /* 后面类选择较多的原因是color属性会继承，
+  我们不想它继承，所以选择器多，权重高，
+  才能给后面的a标签设置上颜色，
+  初学者可以自行搜索： CSS选择器的权重详解 */
+    display: block;
+    background-color: #f1f2f6;
+    color: #7f8c8d;
+    cursor: pointer;
+}
+
+.nav_left .two .three li:hover a {
+    background: #bdc3c7;
+    color: #27ae60;
+    border-radius: 5px;
+    /* 圆角  为了适应多种浏览器的内核 */
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+
+/* 右边 */
+
+.nav_right li {
+    float: right;
+    line-height: 60px;
+}
+
+.nav_right li a {
+    padding: 0 25px;
+    display: block;
+}
+
+.nav_right li:hover a {
+    color: #27ae60;
+}

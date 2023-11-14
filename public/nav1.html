@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>企业小栈</title>
+    <style type="text/css">
+
+        *{padding: 0;margin: 0;}
+		body{background: url(images/body_bg.gif);}
+        .container{width: 1000px;margin: 0 auto;}
+		/* 顶部 */
+		header{height: 100px;padding-top: 30px;box-sizing: border-box;}
+		header .hlist{float: right;line-height: 65px;height: 50px;}	
+		header a{text-decoration: none;color: gray;}
+		header .hlist span{padding: 0px 5px;color: gray;}
+		header .hlist img{vertical-align: middle;}
+		/* 导航栏 */
+		nav{height: 97px;background: url(images/menu_center.jpg) repeat-x;}
+		/*一二级共有样式*/
+		nav ul{list-style: none;}
+		nav a{text-decoration: none;display: inline-block;width: 150px;background-position: bottom;background-repeat: no-repeat;}
+		/*一级导航*/
+		nav>ul>li{float: left;text-align: center;}
+		nav>ul>li>a{color: #eee;height: 50px;line-height: 50px;}
+		
+		/*滑动门*/
+		/* nav>ul>li>a{display: inline-block;background-position: left center;background-repeat: no-repeat;}
+		nav>ul>li>a>span{display: inline-block;width: 150px;height: 97px;background-position: right center;background-repeat: no-repeat;}
+		nav>ul>li>a:hover{background-image: url(images/menu_left.jpg);}
+		nav>ul>li>a>span:hover{background-image: url(images/menu_right.jpg);} */
+		
+		/*二级导航*/
+		nav>ul>li>ul{position: absolute;visibility: hidden;}/*脱流，脱出父元素宽度*/
+		nav>ul>li>ul>li{float: left;}
+		nav>ul>li>ul>li>a{color: #000;height: 40px;line-height: 40px;}
+		
+		/*一级导航鼠标动作*/
+		nav>ul>li>a:hover{color: orange;background-image: url(images/list_bg.gif);}/*注意此处的属性，不可连写，不然会覆盖上文设置的属性值*/
+		nav>ul>li:hover ul{visibility: visible;}
+		/*二级导航鼠标动作*/
+		nav>ul>li>ul>li>a:hover{color: orange;background-image: url(images/list_bg.gif);}/*注意此处的属性，不可连写，不然会覆盖上文设置的属性值*/
+		/*页脚*/
+		
+    </style>
+</head>
+<body>
+   <header class="container">
+	   <a href="#"><img src="images/logo.gif" /></a>
+	   <div class="hlist">
+			<a href="#">网站首页</a>
+			<span>|</span>
+			<a href="#">行业知识</a>
+			<span>|</span>
+			<a href="#">联系我们</a>
+			<span>|</span>
+			<a href="#">网站地图</a>
+			<a href="#"><img src="images/english.gif"/></a>
+			<a href="#"><img src="images/Japan.gif" ></a>
+	   </div>
+   </header>
+   <nav>
+	   <ul class="container">
+	   	<li><a href="#"><span>公司首页</span></a></li>
+		<li>
+			<a href="#"><span>公司品牌</span></a>
+			<ul>
+				<li><a href="#"><span>品牌故事</span></a></li>
+				<li><a href="#"><span>品牌类型</span></a></li>
+				<li><a href="#"><span>品牌人生</span></a></li>
+				<li><a href="#"><span>认识品牌</span></a></li>
+			</ul>
+		</li>
+		<li><a href="#"><span>经营发展</span></a></li>
+		<li><a href="#"><span>新闻中心</span></a></li>
+		<li><a href="#"><span>企业文化</span></a></li>
+		<li><a href="#"><span>关于我们</span></a></li>
+	   </ul>
+   </nav>
+   
+   <footer></footer>
+</body>
+</html>

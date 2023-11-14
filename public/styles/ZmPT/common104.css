@@ -1,0 +1,38 @@
+body {
+  margin: 0 8px;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Ubuntu, Helvetica Neue, Helvetica, Arial, PingFang SC, Hiragino Sans GB, Microsoft YaHei UI, Microsoft YaHei, Source Han Sans CN, sans-serif;
+}
+
+table {
+  border: none;
+  border-collapse: collapse;
+}
+table.head,
+table.mainouter {
+  width: 100%;
+  min-width: 700px;
+  max-width: 1280px;
+}
+table.head {
+  height: 100px;
+}
+table.mainouter {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  border-radius: 6px;
+}
+table.main {
+  width: 100%;
+}
+table#info_block {
+  width: 100%;
+  margin-top: 10px;
+}
+table#info_block td {
+  border: none;
+  border-radius: 4px;
+  padding: 4px;
+}
+table.torrents td.colhead,
+table.torrents td.rowfollow {
+  text-align: center;
+}

@@ -1,0 +1,8 @@
+#img-pool-gif-box img {
+    height: 80px;
+    display: none;
+}
+
+#img-pool-gif-box img:first-child {
+    display: block;
+}
